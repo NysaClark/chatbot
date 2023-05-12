@@ -69,6 +69,11 @@ function App() {
     }).then((data) => {
       console.log(data);
       console.log(data.choices[0].message.content);
+      setMessages([...chatMessages, {
+        message: data.choices[0].message.content,
+        sender: "ChatGPT"
+      }])
+      setTyping(false);
     })
   }
 
@@ -77,7 +82,7 @@ function App() {
       <div style={{ position: "relative", height: "800px", width: "700px"}} >
         <MainContainer>
           <ChatContainer>
-            <MessageList typingIndicator={typing ? <TypingIndicator content="ChatGPT is typing" /> : null}>
+            <MessageList scrollBehavior='smooth' typingIndicator={typing ? <TypingIndicator content="ChatGPT is typing" /> : null}>
               {messages.map((message, index) => {
                 return <Message key={index} model={message} />
               })}
