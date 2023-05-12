@@ -3,9 +3,9 @@
 
 Go into your App.jsx folder and delete everything but the outermost div.
 
-`import @chatscope/chat-ui-kit-styles/dist/default/styles.min.css`
-
-`import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from @chatscope/chat-ui-kit-react`
+	import @chatscope/chat-ui-kit-styles/dist/default/styles.min.css
+	
+	import { MainContainer, ChatContainer, MessageList, Message, MessageInput, TypingIndicator } from @chatscope/chat-ui-kit-react
 
 Add a new div to the App div and styling to it:
 	
@@ -66,4 +66,4 @@ So while the user is waiting for a response from the API it will say "ChatGPT is
 
 ___
 ### To move to Step 2:
-`git checkout step-2`
+	git checkout step-2
